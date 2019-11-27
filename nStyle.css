@@ -1,0 +1,14 @@
+#Nicola-Red{
+    background-color: #e60005;
+}
+#Nicola-Green{
+    background-color: #02e307;
+}
+#Nicola-Font-Color{
+    color: white;
+}
+#Nicola-Font-Color:hover{
+    color: cyan;
+    text-decoration: underline;
+    
+}
