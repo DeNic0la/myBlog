@@ -86,7 +86,8 @@
 
 <section class="mbr-section info1 cid-rIy4rTd5UN" id="info1-i">
 
-    
+
+
 
     
     <div class="container">
@@ -106,7 +107,10 @@
 <section class="features5 cid-rIy0ZOQJRg" id="features5-e">
     
     
-
+<?php
+    require 'showNN.php';
+    /*
+?>
     
     <div class="container">
         <div class="media-container-row">
@@ -152,15 +156,20 @@
 
             
         </div>
+        <?php 
+    
     </div>
+
+   
 </section>
 
 <section class="features5 cid-rIy15AzmAm" id="features5-f">
     
-    
 
     
     <div class="container">
+    
+    ?>
         <div class="media-container-row">
 
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -204,15 +213,22 @@
 
             
         </div>
+        <?php
+    
     </div>
+
+    
 </section>
 
 <section class="features5 cid-rIy165CLKs" id="features5-g">
     
+
     
 
     
     <div class="container">
+    
+    ?>
         <div class="media-container-row">
 
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -258,6 +274,10 @@
         </div>
     </div>
 </section>
+
+*/
+?>
+
 
 <section class="services5 cid-rIy19ttjtK" id="services5-h">
     <!---->
