@@ -117,7 +117,7 @@ if ($picture !== 'kein'){
             </div>
 
             <div class="mbr-figure pl-lg-5" style="width: 105%;">
-              <img src="<?= $PostInhalt ?>" alt = "Bild des Beitrags">
+              <img src="<?= $picture ?>" alt = "Bild des Beitrags">
             </div>
         </div>
     </div>

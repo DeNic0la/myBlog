@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="nStyle.css">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
@@ -109,7 +110,7 @@
     
 <?php
     require 'showNN.php';
-    /*
+   /* 
 ?>
     
     <div class="container">
@@ -156,7 +157,7 @@
 
             
         </div>
-        <?php 
+      
     
     </div>
 
@@ -169,7 +170,7 @@
     
     <div class="container">
     
-    ?>
+  
         <div class="media-container-row">
 
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -213,7 +214,7 @@
 
             
         </div>
-        <?php
+       
     
     </div>
 
@@ -228,7 +229,7 @@
     
     <div class="container">
     
-    ?>
+    
         <div class="media-container-row">
 
             <div class="card p-3 col-12 col-md-6 col-lg-4">
@@ -273,10 +274,10 @@
             
         </div>
     </div>
+
+    */ ?>
 </section>
 
-*/
-?>
 
 
 <section class="services5 cid-rIy19ttjtK" id="services5-h">
