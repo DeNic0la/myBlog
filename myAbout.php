@@ -52,7 +52,7 @@
                         <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>myBlog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="page2.php">
+                    <a class="nav-link link text-white display-4" href="myAbout.php">
                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>myAbout &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                 </li></ul>
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="myLogin.php">
@@ -73,7 +73,7 @@
                 <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-1">myAbout</h1>
                 <p class="mbr-text align-center display-5 pb-3 mbr-fonts-style">
                    Hier findest du alles was du über meinen Blog wissen musst. Um zu den Beiträgen zu gelangen Klicke auf "myBlog"</p>
-                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-secondary display-4" href="page2.php#services1-m">myMates</a>
+                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-secondary display-4" href="myAbout.php#services1-m">myMates</a>
                         <a class="btn btn-md btn-white-outline display-4" href="myBlog.php">myBlog</a></div>
             </div>
         </div>
@@ -165,6 +165,11 @@
                 
             </div>
             <!--Card-1-->
+
+            <?php
+
+            require 'getmyMates.php';
+            /*
             <div class="card col-12 col-md-6 p-3 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
@@ -217,184 +222,8 @@
                 </div>
             </div>
             <!--Card-4-->
-            
-        </div>
-    </div>
-</section>
-
-<section class="services1 cid-rIym1ZqZ4k" id="services1-o">
-    <!---->
-    
-    <!---->
-    <!--Overlay-->
-    
-    <!--Container-->
-    <div class="container">
-        <div class="row justify-content-center">
-            <!--Titles-->
-            <div class="title pb-5 col-12">
-                
-                
-            </div>
-            <!--Card-1-->
-            <div class="card col-12 col-md-6 p-3 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/product1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Watch Star
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus
-                            eligendi eum illo placeat quis repellendus sequi tempore!
-                        </p>
-                        <!--Btn-->
-                        <div class="mbr-section-btn align-left">
-                            <a href="https://mobirise.co" class="btn btn-warning-outline display-4">
-                                $ 790
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Card-2-->
-            <div class="card col-12 col-md-6 p-3 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/product1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Watch Special
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus
-                            eligendi eum illo placeat quis repellendus sequi tempore!
-                        </p>
-                        <!--Btn-->
-                        <div class="mbr-section-btn align-left">
-                            <a href="https://mobirise.co" class="btn btn-warning-outline display-4">
-                                $ 690
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Card-3-->
-            <div class="card col-12 col-md-6 p-3 col-lg-4 last-child">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/product1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Watch Srong
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus
-                            eligendi eum illo placeat quis repellendus sequi tempore!
-                        </p>
-                        <!--Btn-->
-                        <div class="mbr-section-btn align-left">
-                            <a href="https://mobirise.co" class="btn btn-warning-outline display-4">
-                                $ 990
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Card-4-->
-            
-        </div>
-    </div>
-</section>
-
-<section class="services1 cid-rIym18lD1E" id="services1-n">
-    <!---->
-    
-    <!---->
-    <!--Overlay-->
-    
-    <!--Container-->
-    <div class="container">
-        <div class="row justify-content-center">
-            <!--Titles-->
-            <div class="title pb-5 col-12">
-                
-                
-            </div>
-            <!--Card-1-->
-            <div class="card col-12 col-md-6 p-3 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/product1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Watch Star
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus
-                            eligendi eum illo placeat quis repellendus sequi tempore!
-                        </p>
-                        <!--Btn-->
-                        <div class="mbr-section-btn align-left">
-                            <a href="https://mobirise.co" class="btn btn-warning-outline display-4">
-                                $ 790
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Card-2-->
-            <div class="card col-12 col-md-6 p-3 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/product1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Watch Special
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus
-                            eligendi eum illo placeat quis repellendus sequi tempore!
-                        </p>
-                        <!--Btn-->
-                        <div class="mbr-section-btn align-left">
-                            <a href="https://mobirise.co" class="btn btn-warning-outline display-4">
-                                $ 690
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Card-3-->
-            <div class="card col-12 col-md-6 p-3 col-lg-4 last-child">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <img src="assets/images/product1.jpg" alt="Mobirise">
-                    </div>
-                    <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-5">
-                            Watch Srong
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium dolores doloribus
-                            eligendi eum illo placeat quis repellendus sequi tempore!
-                        </p>
-                        <!--Btn-->
-                        <div class="mbr-section-btn align-left">
-                            <a href="https://mobirise.co" class="btn btn-warning-outline display-4">
-                                $ 990
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Card-4-->
+            */
+            ?>
             
         </div>
     </div>

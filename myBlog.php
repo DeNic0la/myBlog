@@ -54,7 +54,7 @@
                         <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>myBlog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="page2.php">
+                    <a class="nav-link link text-white display-4" href="myAbout.php">
                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>myAbout &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                 </li></ul>
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="myLogin.php">
@@ -289,13 +289,19 @@
     <!--Container-->
     <div class="container">
         <div class="row">
-            <!--
+            
             <div class="title pb-5 col-12">
                 <h2 class="align-left mbr-fonts-style m-0 display-1">
                     Andere Beiträge</h2>
                 
             </div>
-            
+             
+             <?php
+                require 'showAll.php';
+
+?>
+
+            <!--
             <div class="card px-3 col-12">
                 <div class="card-wrapper media-container-row media-container-row">
                     <div class="card-box">
