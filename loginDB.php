@@ -1,0 +1,5 @@
+<?php
+
+require 'connectDB.php';
+
+

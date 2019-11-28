@@ -16,3 +16,12 @@
     margin: 10px;
     background-color: lightgray;
 }
+.Nicola-Margin-Top{
+    margin-top: 5% ;
+}
+.Nicola-Margin-Left{
+    margin-Left: 20% ;
+    margin-right: 0;
+    list-style-type: none;
+ 
+}

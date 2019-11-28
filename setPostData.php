@@ -8,9 +8,9 @@ $Success = false;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $titel = $_POST['name'] ?? '';  //BlogBeitragsTitel
-    $URL = $_POST['url'] ?? 'kein';
-    $inhalt = $_POST['message'] ?? '';
+    $titel = addslashes($_POST['name'] ?? '');  //BlogBeitragsTitel
+    $URL = addslashes($_POST['url'] ?? 'kein');
+    $inhalt = addslashes($_POST['message'] ?? '');
     $titel = htmlentities(trim($titel));
     $URL = trim($URL);
     $inhalt = htmlentities(trim($inhalt));
