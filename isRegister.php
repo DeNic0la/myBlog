@@ -120,7 +120,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt2 = $pdo->prepare("INSERT INTO `users` (name, email, password, create_date) VALUES( :name , :email, :password, now() ) ");
         $stmt2->execute([':name' => $username, ':email' => $email, ':password' => $hashword]);
         session_start();
-        $_SESSION['User'] = "$username";
+        $_SESSION['user'] = "$username";
     }
 
 }
@@ -183,7 +183,7 @@ echo'
                 <div class="form-container">
                     <div class="media-container-column" data-form-type="formoid">
                         <!---Formbuilder Form--->
-                        <form action="mylgin.php" method="POST" class="mbr-form form-with-styler">
+                        <form action="mylogin.php" method="POST" class="mbr-form form-with-styler">
                             <div class="row">
                                 
                                 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">

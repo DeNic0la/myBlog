@@ -53,7 +53,7 @@
 */
 
 
-
+$wrongpw = false;
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $username =  addslashes($_POST['name'] ?? '');
@@ -66,14 +66,27 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare('SELECT * FROM `users` WHERE name = :username');
     $stmt->execute([':username' => $username]);
     $TMP_1 = $stmt->fetchAll();
-    $wrongpw = false;
+
     if ($TMP_1[0]['name'] === "$username"){
         if (password_verify($password , $TMP_1[0]['password'])){
+            session_start();
+
+            $_SESSION['user'] = $username;
+
             
+            $timestamp = time() + 300;
+            $currentTime = date("Y-m-d H:i:s", $timestamp);
+
+            if ($TMP_1[0]['create_date'] >  $currentTime){
+                $_SESSION['five'] = true ;
+                
+            }
+
+
 
         }
         else{
-            $MessageToUser "Falsches Passwort";
+            $MessageToUser = "Falsches Passwort";
             $wrongpw = true;
         }   
     }
@@ -86,15 +99,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 }
-
-
-$TMP_2 = password_hash("Test",PASSWORD_BCRYPT);
-
-$TMP_3 = password_verify("Test",'$2y$10$Fw/q2BDlMxgfsghxAS3p.uXSS8928McMGivlDrZjFgdPc3iyMhFwe');
-
-if ($TMP_3 === true){
-    $TMP_2 = "True";
-}
+session_start();
 
 echo'
 <section class="header15 cid-rJ6Twl5kng mbr-fullscreen mbr-parallax-background" id="header15-17">
@@ -108,9 +113,11 @@ echo'
                 <div class="mbr-text pb-3 mbr-fonts-style display-5">
                     ';
                     
+                    $createtime = $TMP_1[0]['create_date'];
 
-
-
+                    //if ($TMP_1[0]['create_date'] >  $currentTime)
+                    $TMP_344 = date_diff( $currentTime ,  $createtime );
+                    echo " $TMP_344";
                     if ($wrongpw){
                         echo '<div class="container">
                             <div class="row justify-content-center">
@@ -139,9 +146,9 @@ echo'
                     echo '&nbsp;</div>
             </div>
             <div class="col-lg-4 col-md-5">
-                <div class="form-container">
-                    <div class="media-container-column" data-form-type="formoid">
-                        <form action="mylgin.php" method="POST" class="mbr-form form-with-styler">
+                <div class="form-container ">
+                    <div class="media-container-column " data-form-type="formoid">
+                        <form action="mylogin.php" method="POST" class="mbr-form form-with-styler Nicola-Margin-Top Nicola-Margin-Right">
                             <div class="row">
                                 
                                 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
