@@ -48,11 +48,13 @@ while ($mID < 10){
     else{
         $Desc = "Diese Webseite wurde von $name erstellt. $name wird mit mir zusammen im Basislehrjahr Ausgebildet.";
     }
+    
+    if ($name !== 'Nicola'){
     echo'
     <div class="card col-12 col-md-6 p-3 col-lg-4">
         <div class="card-wrapper">
             <div class="card-img">
-                <img src="img/web_'.$name.'" alt="Bild der Webseite von'.$name.'">
+                <img src="img/web_'.$name.'.png" alt="Bild der Webseite von'.$name.'">
             </div>
             <div class="card-box">
                 <h4 class="card-title mbr-fonts-style display-5">
@@ -67,6 +69,7 @@ while ($mID < 10){
         </div>
     </div>
     ';
+    }
 
 
 
