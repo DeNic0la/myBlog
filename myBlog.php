@@ -289,13 +289,13 @@
     <!--Container-->
     <div class="container">
         <div class="row">
-            <!--Titles-->
+            <!--
             <div class="title pb-5 col-12">
                 <h2 class="align-left mbr-fonts-style m-0 display-1">
                     Andere Beiträge</h2>
                 
             </div>
-            <!--Card-1-->
+            
             <div class="card px-3 col-12">
                 <div class="card-wrapper media-container-row media-container-row">
                     <div class="card-box">
@@ -313,7 +313,7 @@
                     </div>
                 </div>
             </div>
-            <!--Card-2-->
+            
             <div class="card px-3 col-12">
                 <div class="card-wrapper media-container-row media-container-row">
                     <div class="card-box">
@@ -331,7 +331,7 @@
                     </div>
                 </div>
             </div>
-            <!--Card-3-->
+            
             <div class="card px-3 col-12">
                 <div class="card-wrapper media-container-row media-container-row">
                     <div class="card-box">
@@ -349,23 +349,7 @@
                     </div>
                 </div>
             </div>
-            <!--Card-4-->
-            
-            <!--Card-5-->
-            
-            <!--Card-6-->
-            
-            <!--Card-7-->
-            
-            <!--Card-8-->
-            
-            <!--Card-9-->
-            
-            <!--Card-10-->
-            
-            <!--Card-11-->
-            
-            <!--Card-12-->
+            -->
             
         </div>
     </div>

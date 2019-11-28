@@ -31,12 +31,14 @@ for ($i = 0; $i < 9; $i++) {
     if ($picture == 'kein'){
         //Alternativbild
         $img = '<span class="mbr-iconfont mbri-mobile"></span></a>';
+        $Preview = substr ($PostInhalt, 0, 400);
     }else{
         $img = '<img src="'.$picture.'" alt="Zu Diesem Post wurde kein gültiges bild angegeben" />';
+        $Preview = substr ($PostInhalt, 0, 200);
     }
 
 
-    $Preview = substr ($PostInhalt, 0, 200);
+    
     if ($i == 0||$i == 3||$i == 6){
         echo '<div class="container">
             <div class="media-container-row">
