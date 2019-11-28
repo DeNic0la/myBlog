@@ -58,10 +58,13 @@
                     <a class="nav-link link text-white display-4" href="myAbout.php">
                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>myAbout &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="myLogin.php">
-                    
-                    Anmelden</a></div>
-        </div>
+                                <?php
+
+                                session_start();
+
+                                require 'AnmeldeButton.php';
+
+                                ?>
     </nav>
 </section>
 

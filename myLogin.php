@@ -56,17 +56,20 @@
                     <a class="nav-link link text-white display-4" href="myAbout.php">
                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>myAbout &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="myBlog.php">
-                    
-                    myBlog</a></div>
-        </div>
+                                    <?php
+
+                                    session_start();
+
+                                    require 'AnmeldeButton.php';
+
+                                    ?>
     </nav>
 </section>
 
     <?php
 
     //Require stuff
-    require 'loginDB.php';
+    require 'connectDB.php';
 
 
 

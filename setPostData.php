@@ -4,6 +4,7 @@
 $NoInhalt = false;
 $NoTitiel = false;
 $Success = false;
+$NotVerified = false;
 
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,9 +32,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $CurrentUser = 'Enter Username Here';
         
         require 'connectDB.php';
+
         if ($NoInhalt || $NoTitiel){
    
-        }else{
+        }else if ($_SESSION['five'] === true) {
         $stmt = $pdo->prepare("INSERT INTO `beiträge` (created_at, created_by, post_titel, post_inhalt, picture) VALUES( Now() , :user, :postTitel, :postInhalt, :picture ) ");
         $stmt->execute([':user' => $CurrentUser, ':postTitel' => $titel, ':postInhalt' => $inhalt, ':picture' => $URL]);
 
@@ -47,5 +49,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $Success = true;
         $Beitragslink = "myPost.php?post=$ID"; // TMP
 
+        }
+        else{
+            //Error Message "You have to wait 5 Minutes untill you can Create your first Post"
+            $NotVerified = true;
         }
 }

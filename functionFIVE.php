@@ -19,11 +19,11 @@ $interval->format('%i');
 */
 
 
-
-
+$TMP_456 = $_SESSION['user'] ?? '';
+require 'connectDB.php';
 if (isset($_SESSION['user'])){
     $stmt3 = $pdo->prepare('SELECT * FROM `users` WHERE name = :username');
-    $stmt3->execute([':username' => $_SESSION['user']]);
+    $stmt3->execute([':username' => $TMP_456 ]);
     $TMP_1 = $stmt3->fetchAll();
     $timestamp = time();
     $datum = date("Y-m-d H:i:s", $timestamp);
@@ -44,6 +44,9 @@ if (isset($_SESSION['user'])){
     else if ($interval->format('%i') > 4 ){
         $_SESSION['five'] = true ;
     }
+    else{
+        $_SESSION['five'] = false ; 
+    }
 
     
 
@@ -51,7 +54,7 @@ if (isset($_SESSION['user'])){
 
 }
 else{
-
+    $_SESSION['five'] = false ;
 }
 
 

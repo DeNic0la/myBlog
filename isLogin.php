@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($TMP_1[0]['name'] === "$username"){
         if (password_verify($password , $TMP_1[0]['password'])){
-            session_start();
+
 
             $_SESSION['user'] = $username;
 
@@ -77,11 +77,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $timestamp = time() + 300;
             $currentTime = date("Y-m-d H:i:s", $timestamp);
 
-            if ($TMP_1[0]['create_date'] >  $currentTime){
-                $_SESSION['five'] = true ;
-                
-            }
 
+            
 
 
         }
@@ -102,7 +99,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 session_start();
 
 echo'
-<section class="header15 cid-rJ6Twl5kng mbr-fullscreen mbr-parallax-background" id="header15-17">
+<section class="header15 cid-rJ6Twl5kng mbr-fullscreen mbr-parallax-background Nicola-Padding-Top id="header15-17">
     <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(7, 59, 76);"></div>
 
     <div class="container align-right">
@@ -113,11 +110,8 @@ echo'
                 <div class="mbr-text pb-3 mbr-fonts-style display-5">
                     ';
                     
-                    $createtime = $TMP_1[0]['create_date'];
+                    require 'functionFIVE.php';
 
-                    //if ($TMP_1[0]['create_date'] >  $currentTime)
-                    $TMP_344 = date_diff( $currentTime ,  $createtime );
-                    echo " $TMP_344";
                     if ($wrongpw){
                         echo '<div class="container">
                             <div class="row justify-content-center">
@@ -137,11 +131,6 @@ echo'
                             </div>';
                     }
 
-
-
-
-
-                    
                     
                     echo '&nbsp;</div>
             </div>

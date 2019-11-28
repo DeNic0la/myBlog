@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 /*
 $NoInhalt = false;
@@ -64,10 +64,13 @@ $NoTitiel = false;
                     <a class="nav-link link text-white display-4" href="myAbout.php">
                         <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>myAbout &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="myLogin.php">
-                    
-                    Anmelden</a></div>
-        </div>
+                                <?php
+
+                                
+
+                                require 'AnmeldeButton.php';
+
+                                ?>
     </nav>
 </section>
 
@@ -88,7 +91,7 @@ $NoTitiel = false;
         </div>
     </div>
     <?php
-                    if ($NoTitiel || $NoInhalt||$Success){
+                    if ($NoTitiel || $NoInhalt||$Success||$NotVerified){
                         echo '<div class="container">
                             <div class="row justify-content-center">
                             <div class="alert col-7 ">
@@ -104,7 +107,9 @@ $NoTitiel = false;
                         if ($Success){
                             echo '<li class = "alert" id = "Nicola-Green">Ihr Beitrag wurde Erfolgreich erstellt,  <a id = "Nicola-Font-Color"href = "'.$Beitragslink.'">  Zum Beitrag</a> </li>';
                         }
-
+                        if ($NotVerified){
+                            echo '<li class = "alert" id = "Nicola-Red">Sie müssen mit einem Mindestens 5 Minuten alten Account angemeldet sein um Beiträge erstellen zu können</li>';
+                        }
                         echo '
                             </ul>
                             </div>
@@ -118,7 +123,7 @@ $NoTitiel = false;
         <div class="row justify-content-center">
             <div class="media-container-column col-lg-8" data-form-type="formoid">
                 <!---Formbuilder Form--->
-                <form action="mycreatepost.php" method="POST" class="mbr-form form-with-styler" >
+                <form action="myCreatePost.php" method="POST" class="mbr-form form-with-styler" >
                     <div class="row">
                         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Dein Blogpost wird Hochgeladen.</div>
                         <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
