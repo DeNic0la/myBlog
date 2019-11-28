@@ -62,7 +62,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = htmlentities(trim($username));
     $email = htmlentities(trim($email));
     $password = htmlentities($password);
-    $Unique = false;
+    $Unique = true;
     
     $Empty_Email = false;
     $Empty_password = false;
@@ -72,6 +72,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username === ''){
         //Errormessage Username is Empty
         $Empty_Username = true;
+        $Unique = false;
     }
     if ($email === ''){
         //Errormessage Username is Empty
@@ -79,10 +80,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $Empty_Email = true;
         }
         $TMP_7= true;
+        $Unique = false;
     }
     if ($password === ''){
         //Errormessage Username is Empty
         $Empty_password = true;
+        $Unique = false;
     }
 
 
@@ -114,10 +117,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($Unique){
         $hashword = password_hash($password,PASSWORD_BCRYPT);
-
-        
-
-
+        $stmt2 = $pdo->prepare("INSERT INTO `users` (name, email, password, create_date) VALUES( :name , :email, :password, now() ) ");
+        $stmt2->execute([':name' => $username, ':email' => $email, ':password' => $hashword]);
+        session_start();
+        $_SESSION['User'] = "$username";
     }
 
 }

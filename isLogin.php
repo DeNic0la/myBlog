@@ -66,16 +66,22 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare('SELECT * FROM `users` WHERE name = :username');
     $stmt->execute([':username' => $username]);
     $TMP_1 = $stmt->fetchAll();
+    $wrongpw = false;
+    if ($TMP_1[0]['name'] === "$username"){
+        if (password_verify($password , $TMP_1[0]['password'])){
+            
 
-    if ($TMP_1[0]['name'] === "$username" ){
-        
-
+        }
+        else{
+            $MessageToUser "Falsches Passwort";
+            $wrongpw = true;
+        }   
     }
     else{
         //isRegister Aufrufen
 
         require 'isregister.php';
-        $MessageToUser = "Der von dir Gewählte Name Existiert nicht. Registriere dich Jetzt hier!";
+        $MessageToUser = "Dieser Benutzer Existiert nicht. Registriere dich Jetzt hier.";
         die;
     }
 
@@ -84,13 +90,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $TMP_2 = password_hash("Test",PASSWORD_BCRYPT);
 
-$TMP_3 = password_verify("baum",'$2y$10$Fw/q2BDlMxgfsghxAS3p.uXSS8928McMGivlDrZjFgdPc3iyMhFwe');
+$TMP_3 = password_verify("Test",'$2y$10$Fw/q2BDlMxgfsghxAS3p.uXSS8928McMGivlDrZjFgdPc3iyMhFwe');
 
 if ($TMP_3 === true){
     $TMP_2 = "True";
 }
-
-
 
 echo'
 <section class="header15 cid-rJ6Twl5kng mbr-fullscreen mbr-parallax-background" id="header15-17">
@@ -101,10 +105,40 @@ echo'
             <div class="mbr-white col-lg-8 col-md-7 content-container">
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
                     Anmelden</h1>
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">
-                    Anmelden'.$TMP_2.'&nbsp;</p>
+                <div class="mbr-text pb-3 mbr-fonts-style display-5">
+                    ';
+                    
+
+
+
+                    if ($wrongpw){
+                        echo '<div class="container">
+                            <div class="row justify-content-center">
+                            <div class="alert col-7 ">
+                            <ul>
+                            ';
+    
+                        if ($wrongpw){
+                            echo '<li class = "alert Nicola-Margin-Left" id = "Nicola-Red">Das von dir eingegebene Passwort ist Falsch</li>';
+                        }
+                        
+    
+                        echo '
+                            </ul>
+                            </div>
+                            </div>
+                            </div>';
+                    }
+
+
+
+
+
+                    
+                    
+                    echo '&nbsp;</div>
             </div>
-            <div class="col-lg-4 col-md-5 Nicola-Margin-Top">
+            <div class="col-lg-4 col-md-5">
                 <div class="form-container">
                     <div class="media-container-column" data-form-type="formoid">
                         <form action="mylgin.php" method="POST" class="mbr-form form-with-styler">
