@@ -44,7 +44,7 @@
                          <img src="assets/images/mybloglogo-310x191.png" alt="myBlogLogo" title="Home" style="height: 6.7rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://mobirise.com"></a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="index.php"></a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

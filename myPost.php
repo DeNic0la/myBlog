@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="nStyle.css">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
@@ -45,7 +46,7 @@
                          <img src="assets/images/mybloglogo-310x191.png" alt="myBlogLogo" title="Home" style="height: 6.7rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://mobirise.com"></a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="index.php"></a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -67,7 +68,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/s">TEST</a></section><section class="mbr-section content4 cid-rIytqJB91J" id="content4-w">
+<section class="engine"><a href="index.php">TEST</a></section><section class="mbr-section content4 cid-rIytqJB91J" id="content4-w">
 
 <?php
     require 'dbgetpost.php';
@@ -143,33 +144,27 @@ else
 </section>
 <?php } ?>
 
-<section class="cid-rIyz56TmMi" id="social-buttons1-15">
-    
-    
+<section class="mbr-section content8 cid-rJdeNL6vlC Nicola-White" id="content8-19">
 
     
 
-    <div class="container">
-        <div class="media-container-row">
-            <div class="col-md-8 align-center">
-                
-                <div>
-                    <div class="mbr-social-likes" data-counters="false">
-                        <span class="btn btn-social facebook mx-2" title="Link auf Facebook teilen">
-                            <i class="socicon socicon-facebook"></i>
-                        </span>
-                        <span class="btn btn-social twitter mx-2" title="Link auf Twitter teilen">
-                            <i class="socicon socicon-twitter"></i>
-                        </span>
-                        
-                        
-                    </div>
+    <div class="container Nicola-White">
+        <div class="media-container-row title">
+            <div class="col-12 col-md-8">
+                <div class="mbr-section-btn align-center Nicola-Flex">
+                    <a class="btn display-4 Nicola-Button" href="Like Function"><img src= "img\Like.png" class = "N-P"alt = "Like"></a>
+                    <a class="btn display-4 Nicola-Button" href="Dislike Function"><img src= "img\Dislike.png" class = "N-P"alt = "Like"></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<?php
+
+    require 'getComments.php';
+
+/*        Comments Show
 <section class="mbr-section article content11 cid-rIyvAfga96" id="content11-12">
      
 
@@ -185,6 +180,9 @@ else
         </div>
     </div>
 </section>
+*/
+    require 'writeComment.php';
+?>
 
 <section class="mbr-section form3 cid-rIyzkiAtCq" id="form3-16">
 
@@ -200,11 +198,41 @@ else
                 
             </div>
         </div>
+        <?php
+        if ($CommentIsWritten || $NoUser || $CommentIsEmpty || $ToEarly || $ToManyCom){
+                        echo '<div class="container">
+                            <div class="row justify-content-center">
+                            <div class="alert col-10 ">
+                            <ul>
+                            ';
 
+                        if ($CommentIsWritten){
+                            echo '<li class = "alert" id = "Nicola-Green">Ihr Kommentar wurde Gepostet</li>';
+                        }
+                        if ($NoUser){
+                            echo '<li class = "alert" id = "Nicola-Red">Sie müssen Angemeldet sein um Kommentare Posten zu können</li>';
+                        }
+                        if ($CommentIsEmpty){
+                            echo '<li class = "alert" id = "Nicola-Pink">Nice Try, but you failed</li>';
+                        }
+                        if ($ToEarly){
+                            echo '<li class = "alert" id = "Nicola-Red">Dein Account ist noch nicht 5 Minuten alt</li>';
+                        }
+                        if ($ToManyCom){
+                            echo '<li class = "alert" id = "Nicola-Red">Dein Kommentar wurde nicht gepostet da du bereits 5 Kommentare unter diesem Beitrag geschrieben hast</li>';
+                        }
+                    
+                        echo '
+                            </ul>
+                            </div>
+                            </div>
+                            </div>';
+                    }
+?>
         <div class="row py-2 justify-content-center">
             <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
                 <!---Formbuilder Form--->
-                <form action="https://mobirise.com/" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="P1H2ngZS9AFoOovXnz9DU6DajOgkNZ/yBMgj6/CBIIzCF2prnJe8v9P8lVlaidOwxgJ3C45fLvFJCcZ3nSDc74S/EOYCfGObUMdjRTORywOMUc/PZi8kbR6eBvW8kwAc">
+                <form action="myPost.php?post=<?php echo $idOfPost ; ?>" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="P1H2ngZS9AFoOovXnz9DU6DajOgkNZ/yBMgj6/CBIIzCF2prnJe8v9P8lVlaidOwxgJ3C45fLvFJCcZ3nSDc74S/EOYCfGObUMdjRTORywOMUc/PZi8kbR6eBvW8kwAc">
                     <div class="row">
                         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Ihr Kommentar wird Gepostet</div>
                         <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
@@ -212,9 +240,9 @@ else
                     </div>
                     <div class="dragArea row">
                         <div class="form-group col" data-for="email">
-                            <input type="email" name="email" placeholder="Kommentar" data-form-field="Email" required="required" class="form-control display-7" id="email-form3-16">
+                            <input type="text" name="comment" placeholder="Kommentar" data-form-field="Email" required="required" class="form-control display-7" id="email-form3-16">
                         </div>
-                        <div class="col-auto input-group-btn"><button type="submit" class="btn btn-primary display-4">Senden</button></div>
+                        <div class="col-auto input-group-btn"><button type="submit" class="btn btn-primary display-4">Kommentieren</button></div>
                     </div>
                 </form><!---Formbuilder Form--->
             </div>
@@ -233,7 +261,7 @@ else
   <script src="assets/sociallikes/social-likes.js"></script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
+ 
   
   
 </body>

@@ -4,6 +4,9 @@
 #Nicola-Green{
     background-color: #02e307;
 }
+#Nicola-Pink{
+    background-color: #b328bd;
+}
 #Nicola-Font-Color{
     color: white;
 }
@@ -15,6 +18,9 @@
 .Nicola-Grey{
     margin: 10px;
     background-color: lightgray;
+}
+.Nicola-White{
+    background-color: white;
 }
 .Nicola-Margin-Top{
     margin-top: 15% ;
@@ -32,4 +38,28 @@
 }
 .Nicola-Padding-Top{
     padding-top: 10%;
+}
+.Nicola-Comment{
+    margin-top: 3em;
+    margin-left: 5px;
+    margin-bottom: 0;
+    padding: 5px;
+    
+}
+.Nicola-Ul{
+    list-style-type: none;
+}
+.Nicola-Button{
+    max-width: 30%;
+    display: block;
+}
+.N-P{
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: 40%;
+}
+.Nicola-Flex{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }

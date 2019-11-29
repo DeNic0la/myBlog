@@ -16,8 +16,12 @@ require 'connectDB.php';
 
 $picture = 'kein';
 
-
+/*
 $stmt = $pdo->query("SELECT * FROM `beiträge` where id = $idOfPost");
+*/
+
+$stmt = $pdo->prepare('SELECT * FROM `beiträge` WHERE id = :id');
+$stmt->execute([':id' => $idOfPost]);
 
 $beitrag = $stmt->fetchAll();
 

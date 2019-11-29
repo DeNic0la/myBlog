@@ -46,7 +46,7 @@
                          <img src="assets/images/mybloglogo-310x191.png" alt="myBlogLogo" title="Home" style="height: 6.7rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="https://mobirise.com"></a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="myAbout"></a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -68,7 +68,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/g">how to build your own site</a></section><section class="cid-qTkA127IK8 mbr-fullscreen mbr-parallax-background" id="header2-1">
+<section class="engine"><a href="index.php">Home</a></section><section class="cid-qTkA127IK8 mbr-fullscreen mbr-parallax-background" id="header2-1">
 
     
 
@@ -81,7 +81,7 @@
                 
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">Willkommen auf meinem Blog welchen ich im BLJ erstellt habe.&nbsp;</p>
                 <div class="mbr-section-btn"><a class="btn btn-md btn-secondary display-4" href="myBlog.php">myBlog</a>
-                    <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">myLogin</a></div>
+                    <a class="btn btn-md btn-white-outline display-4" href="myLogin.php">myLogin</a></div>
             </div>
         </div>
     </div>
@@ -154,8 +154,8 @@
         <div class="media-container-row content text-white">
             <div class="col-12 col-md-3">
                 <div class="media-wrap">
-                    <a href="https://mobirise.com/">
-                        <img src="assets/images/mybloglogo-160x111.png" alt="Mobirise" title="">
+                    <a href="index.php">
+                        <img src="assets/images/mybloglogo-160x111.png" alt="myBlog" title="">
                     </a>
                 </div>
             </div>
@@ -189,12 +189,12 @@
                 <div class="col-md-6">
                     <div class="social-list align-right">
                         <div class="soc-item">
-                            <a href="https://twitter.com/mobirise" target="_blank">
+                            <a href="https://twitter.com/" target="_blank">
                                 <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <a href="https://www.facebook.com/" target="_blank">
                                 <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
                             </a>
                         </div>
