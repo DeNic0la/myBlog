@@ -52,7 +52,7 @@
 </section>
 */
 
-
+$UserExists = false;
 $wrongpw = false;
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         //isRegister Aufrufen
 
         require 'isregister.php';
-        $MessageToUser = "Dieser Benutzer Existiert nicht. Registriere dich Jetzt hier.";
+        $UserExists = true;
         die;
     }
 

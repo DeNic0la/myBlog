@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $URL = 'kein';
             }
 
-        $CurrentUser = 'Enter Username Here';
+        $CurrentUser = $_SESSION['user'] ?? '';
         
         require 'connectDB.php';
 

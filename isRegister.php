@@ -142,7 +142,7 @@ echo'
                     Registrieren</h1>
                 <div class="mbr-text pb-3 mbr-fonts-style display-5 conntetn-align-right">';
 
-                if ($TMP_U || $TMP_E||$Unique || $Empty_Username || $Empty_Email || $Empty_password){
+                if ($TMP_U || $TMP_E||$Unique || $Empty_Username || $Empty_Email || $Empty_password||$UserExists){
                     echo '<div class="container">
                         <div class="row justify-content-center">
                         <div class="alert col-7 ">
@@ -165,9 +165,11 @@ echo'
                         echo '<li class = "alert Nicola-Margin-Left" id = "Nicola-Red">Geben sie einen Namen an !</li>';
                     }
                     if ($Unique){
-                        echo '<li class = "alert Nicola-Margin-Left " id = "Nicola-Green"> Ihr Benutzer wurde erfolgreich Registriert </li>';
+                        echo '<li class = "alert Nicola-Margin-Left " id = "Nicola-Green"> Ihr Benutzer wurde erfolgreich Registriert. Sie müssen 5 Minuten Warten bis sie Ihren Ersten beitrag erstellen können, Laden sie die seite in 5 Minuten neu.</li>';
                     }
-
+                    if ($UserExists){
+                        echo '<li class = "alert Nicola-Margin-Left " id = "Nicola-Red"> Der von Ihnen angegebene Benutzer existiert noch nicht. Melden sie sich jetzt hier an ! </li>';
+                    }
                     echo '
                         </ul>
                         </div>

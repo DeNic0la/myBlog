@@ -1,10 +1,10 @@
 <?php
 
 
-$user = 'blj';
-$password = '123';
+$user = 'd041e_gibucher';
+$password = '54321_Db!!!';
 
-$pdo = new PDO('mysql:host=10.20.18.111;dbname=ipadressen', $user, $password, [
+$pdo = new PDO('mysql:host=mysql3.webland.ch;dbname=d041e_gibucher', $user, $password, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 ]);
@@ -34,7 +34,7 @@ $pdo = new PDO('mysql:host=10.20.18.111;dbname=ipadressen', $user, $password, [
 $mID = 0;
 $stmt = $pdo->query("SELECT * FROM `ipadressen`");
 $mate = $stmt->fetchAll();
-while ($mID < 10){
+while ($mID < 9){
 
     $name = $mate[$mID]['vorname'];
     $IP = $mate[$mID]['Ip'];
@@ -48,8 +48,12 @@ while ($mID < 10){
     else{
         $Desc = "Diese Webseite wurde von $name erstellt. $name wird mit mir zusammen im Basislehrjahr Ausgebildet.";
     }
+
+    if ($name === 'Nicola'){
+        $Desc = "Diese Webseite wurde von mir, $name erstellt. Ich bin Lernender bei der Suva, werde Jedoch im BLJ ausgebildet.";
+    }
     
-    if ($name !== 'Nicola'){
+    //if ($name !== 'Nicola'){
     echo'
     <div class="card col-12 col-md-6 p-3 col-lg-4">
         <div class="card-wrapper">
@@ -69,7 +73,7 @@ while ($mID < 10){
         </div>
     </div>
     ';
-    }
+    //}
 
 
 
