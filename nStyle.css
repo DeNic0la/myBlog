@@ -63,3 +63,41 @@
     flex-wrap: nowrap;
     justify-content: center;
 }
+.N-Bar{
+    max-width: 100%;
+    flex-grow: 1;
+}
+.Nicola-Flex-Col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.N-80{
+    max-width: 80%;
+    flex-grow: 1;
+    width: 80%;
+}
+.N-100{
+    max-width: 100%;
+    flex-grow: 1;
+    width: 100%;
+}
+.N-FS{
+    align-self: flex-start;
+    display: inline;
+}
+
+.N-FE{
+    align-self: flex-end;
+    text-align: right;
+    display: inline;
+    margin-left: 85%;
+}
+.Nicola-Flex-2{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+

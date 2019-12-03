@@ -96,7 +96,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 }
-session_start();
+
 
 echo'
 <section class="header15 cid-rJ6Twl5kng mbr-fullscreen mbr-parallax-background Nicola-Padding-Top id="header15-17">

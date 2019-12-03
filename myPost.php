@@ -100,7 +100,6 @@
 </section>
 
 <?php 
-
 if ($picture !== 'kein'){
 
     ?>
@@ -146,16 +145,36 @@ else
 
 <section class="mbr-section content8 cid-rJdeNL6vlC Nicola-White" id="content8-19">
 
-    
+    <?php 
+    require 'getLikes.php';
+    ?>
 
     <div class="container Nicola-White">
         <div class="media-container-row title">
             <div class="col-12 col-md-8">
                 <div class="mbr-section-btn align-center Nicola-Flex">
-                    <a class="btn display-4 Nicola-Button" href="Like Function"><img src= "img\Like.png" class = "N-P"alt = "Like"></a>
-                    <a class="btn display-4 Nicola-Button" href="Dislike Function"><img src= "img\Dislike.png" class = "N-P"alt = "Like"></a>
+                    <a class="btn display-4 Nicola-Button" id="LikeB" href="myPost.php?post=<?php echo $idOfPost; ?>&Like=Like"><img src= "img\Like.png" class = "N-P"alt = "Like"></a>
+                    <a class="btn display-4 Nicola-Button" id="DislikeB" href="myPost.php?post=<?php echo $idOfPost; ?>&Like=Dislike"><img src= "img\Dislike.png" class = "N-P"alt = "Like"></a>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<section class="progress-bars1 cid-rJdf9rpJss Nicola-White" id="progress-bars1-1c">
+    <div class="container">
+        <div class="progress_elements">
+            <div class="progress1 pb-4 ">
+                <div class="title-wrap N-100">
+                    
+                        <div class="progressbar-number Nicola-Flex-2"></div>
+                        <div class = "N-FS" ><span><?php echo $LikeCount ; ?> Likes</span></div>
+                        <div class = "N-FE"><span><?php echo $DislikeCount ; ?> Dislikes</span></div>
+                    
+                </div>
+                <progress class="progress progress-primary N-100" max="<?php echo $AllLike; ?>" value="<?php echo $LikeCount; ?>">
+                </progress>
+            </div>
+
         </div>
     </div>
 </section>
@@ -263,6 +282,22 @@ else
   <script src="assets/theme/js/script.js"></script>
  
   
+    <?php
+        $LikeButton = $_GET['Like'];
+        if ($LikeButton === 'Like'){
+            $_SESSION['Like'] = "Like";
+            require 'setLike.php';
+        }
+        if ($LikeButton === 'Disike'){
+            $_SESSION['Like'] = "Dislike";
+            require 'setLike.php';
+        }
+
+    ?>
+
+
+
+
   
 </body>
 </html>
